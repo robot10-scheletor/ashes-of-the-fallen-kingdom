@@ -3,7 +3,7 @@ local modpath = core.get_modpath(modname)
 
 
 
-local wield_scale = mcl_vars.tool_wield_scale
+
 
 local uses = {
 	quartz = 560,
@@ -37,7 +37,7 @@ core.register_tool("ashes_of_the_fallen_kingdom:quartz_pike", {
 	_doc_items_longdesc = spear_longdesc,
 	_doc_items_usagehelp = spear_use,
 	inventory_image = "quartz_pike.png",
-	wield_scale = wield_scale,
+	wield_scale = {x= 3,y= 3,z=1},
 	on_place = spear_on_place,
 	on_secondary_use = spear_on_place,
 	groups = { weapon = 1, weapon_ranged = 1, spear = 1, dig_speed_class = 3, enchantability = 12 },
@@ -58,5 +58,27 @@ core.register_tool("ashes_of_the_fallen_kingdom:quartz_pike", {
 	touch_interaction = "short_dig_long_place",
 	_mcl_spear_thrown_damage = 8.5,
 	
+})
+
+minetest.register_tool("ashes_of_the_fallen_kingdom:quartz_claymore", {
+	description = ("Quartz Claymore"),
+	_doc_items_longdesc = sword_longdesc,
+	_doc_items_hidden = false,
+	inventory_image = "quartz_claymore.png",
+	wield_scale = {x=3.5,y=3.5, z=1.5},
+	groups = { weapon=1, sword=1, dig_speed_class=2, enchantability=15 },
+	tool_capabilities = {
+		full_punch_interval = 0.715,
+		max_drop_level=4,
+		damage_groups = {fleshy=10.5},
+		punch_attack_uses = 550,
+	},
+	sound = { breaks = "default_tool_breaks" },
+	_repair_material = "group:quartz",
+	_mcl_toollike_wield = true,
+	_mcl_diggroups = {
+		swordy = { speed = 7, level = 5, uses = 550 },
+		swordy_cobweb = { speed = 7, level = 5, uses = 550 }
+	},
 })
 

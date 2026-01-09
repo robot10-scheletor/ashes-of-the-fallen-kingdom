@@ -6,6 +6,8 @@ dofile(MP.."/crafting.lua")
 
 dofile(MP.."/craftitems.lua")
 
-dofile(MP.."/vl_spears.lua")
+dofile(MP.."/weaponry.lua")
+
+dofile(MP.."/armor.lua")
 
 
