@@ -55,7 +55,7 @@ minetest.register_tool("ashes_of_the_fallen_kingdom:sword_quartz", {
 		punch_attack_uses = 550,
 	},
 	sound = { breaks = "default_tool_breaks" },
-	_repair_material = "group:quartz",
+	_repair_material = "mcl_core:nether_quartz",
 	_mcl_toollike_wield = true,
 	_mcl_diggroups = {
 		swordy = { speed = 7, level = 5, uses = 550 },
@@ -78,9 +78,53 @@ minetest.register_tool("ashes_of_the_fallen_kingdom:axe_quartz", {
 	},
 	on_place = make_stripped_trunk,
 	sound = { breaks = "default_tool_breaks" },
-	_repair_material = "group:wood",
+	_repair_material = "mcl_core:nether_quartz",
 	_mcl_toollike_wield = true,
 	_mcl_diggroups = {
 		axey = { speed = 8.5, level = 5.5, uses = 550 }
+	},
+})
+
+minetest.register_tool("ashes_of_the_fallen_kingdom:sword_netherling", {
+	description = ("Netherling Sword"),
+	_doc_items_longdesc = sword_longdesc,
+	_doc_items_hidden = false,
+	inventory_image = "netherling_sword.png",
+	wield_scale = wield_scale,
+	groups = { weapon=1, sword=1, dig_speed_class=2, enchantability=10 },
+	tool_capabilities = {
+		full_punch_interval = 0.815,
+		max_drop_level=4,
+		damage_groups = {fleshy=9.5},
+		punch_attack_uses = 3515,
+	},
+	sound = { breaks = "default_tool_breaks" },
+	_repair_material = "mcl_nether:netherite_scrap",
+	_mcl_toollike_wield = true,
+	_mcl_diggroups = {
+		swordy = { speed = 9.5, level = 6.5, uses = 3515 },
+		swordy_cobweb = { speed = 9.5, level = 6.5, uses = 3515 }
+	},
+})
+
+minetest.register_tool("ashes_of_the_fallen_kingdom:mace_netherling", {
+	description = ("Netherling Mace"),
+	_doc_items_longdesc = shovel_longdesc,
+	_doc_items_usagehelp = shovel_use,
+	inventory_image = "netherling_mace.png",
+	wield_scale = wield_scale,
+	groups = { tool=1, shovel=1, dig_speed_class=6, enchantability=10, fire_immune=1 },
+	tool_capabilities = {
+		full_punch_interval = 1,
+		max_drop_level=5,
+		damage_groups = {fleshy=11},
+		punch_attack_uses = 3515,
+	},
+	
+	sound = { breaks = "default_tool_breaks" },
+	_repair_material = "mcl_nether:netherite_scrap",
+	_mcl_toollike_wield = true,
+	_mcl_diggroups = {
+		shovely = { speed = 9.5, level = 6.5, uses = 3515 }
 	},
 })

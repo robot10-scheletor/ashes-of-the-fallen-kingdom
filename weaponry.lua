@@ -32,7 +32,7 @@ end
 
 
 core.register_tool("ashes_of_the_fallen_kingdom:quartz_pike", {
-	description = ("quartz Pike"),
+	description = ("Quartz Pike"),
 	_tt_help = spear_tt,
 	_doc_items_longdesc = spear_longdesc,
 	_doc_items_usagehelp = spear_use,
@@ -79,6 +79,28 @@ minetest.register_tool("ashes_of_the_fallen_kingdom:quartz_claymore", {
 	_mcl_diggroups = {
 		swordy = { speed = 7, level = 5, uses = 550 },
 		swordy_cobweb = { speed = 7, level = 5, uses = 550 }
+	},
+})
+
+minetest.register_tool("ashes_of_the_fallen_kingdom:netherling_claymore", {
+	description = ("Netherling Claymore"),
+	_doc_items_longdesc = sword_longdesc,
+	_doc_items_hidden = false,
+	inventory_image = "netherling_claymore.png",
+	wield_scale = {x=3.5,y=3.5, z=1.5},
+	groups = { weapon=1, sword=1, dig_speed_class=2, enchantability=10 },
+	tool_capabilities = {
+		full_punch_interval = 0.915,
+		max_drop_level=4,
+		damage_groups = {fleshy=13},
+		punch_attack_uses = 3515,
+	},
+	sound = { breaks = "default_tool_breaks" },
+	_repair_material = "mcl_nether:netherite_scrap",
+	_mcl_toollike_wield = true,
+	_mcl_diggroups = {
+		swordy = { speed = 7.5, level = 5.5, uses = 3515 },
+		swordy_cobweb = { speed = 7.5, level = 5.5, uses = 3515 }
 	},
 })
 
