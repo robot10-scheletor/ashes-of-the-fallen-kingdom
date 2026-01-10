@@ -8,8 +8,8 @@ local modpath = core.get_modpath(modname)
 local uses = {
 	quartz = 560,
 }
-local materials = {
-	emerald = "mcl_core:nether_quartz",
+local materials = {  "mcl_core:nether_quartz",
+	 
 }
 
 local SPEAR_RANGE = 4.5

@@ -10,4 +10,6 @@ dofile(MP.."/weaponry.lua")
 
 dofile(MP.."/armor.lua")
 
+dofile(MP.."/throwing_knife.lua")
+
 
